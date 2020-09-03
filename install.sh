@@ -107,7 +107,21 @@ install(){
       "add": "jt9285.us-south.cf.appdomain.cloud",
       "port": "443",
       "id": "${UUID}",
-      "aid": "85
+      "aid": "85",
+      "net": "ws",
+      "type": "none",
+      "host": "",
+      "path": "${WSPATH}",
+      "tls": "tls"
+    }
+EOF
+    )
+	echo "配置链接："
+    echo vmess://${VMESSCODE}
+
+}
+
+clone_repo
 create_mainfest_file
 install
 exit 0
