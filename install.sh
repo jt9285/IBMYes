@@ -59,7 +59,7 @@ EOF
 
 clone_repo(){
     echo "进行初始化。。。"
-    git clone https://github.com/CCChieh/IBMYes
+    git clone https://github.com/jt9285/IBMYes
     cd IBMYes
     git submodule update --init --recursive
     cd v2ray-cloudfoundry/v2ray
@@ -103,25 +103,11 @@ install(){
     VMESSCODE=$(base64 -w 0 << EOF
     {
       "v": "2",
-      "ps": "ibmyes",
-      "add": "ibmyes.us-south.cf.appdomain.cloud",
+      "ps": "jt9285",
+      "add": "jt9285.us-south.cf.appdomain.cloud",
       "port": "443",
       "id": "${UUID}",
-      "aid": "4",
-      "net": "ws",
-      "type": "none",
-      "host": "",
-      "path": "${WSPATH}",
-      "tls": "tls"
-    }
-EOF
-    )
-	echo "配置链接："
-    echo vmess://${VMESSCODE}
-
-}
-
-clone_repo
+      "aid": "85
 create_mainfest_file
 install
 exit 0
